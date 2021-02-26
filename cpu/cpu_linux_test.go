@@ -8,19 +8,21 @@ import (
 	"testing"
 )
 
+const numCores = 2
+
 func TestGetCPU(t *testing.T) {
-	cpu, err := Get()
+	cpu, err := Get(numCores)
 	if err != nil {
 		t.Fatalf("error should be nil but got: %v", err)
 	}
-	if cpu.User <= 0 || cpu.System <= 0 || cpu.Total <= 0 || cpu.StatCount < 4 {
+	if cpu[0].User <= 0 || cpu[0].System <= 0 || cpu[0].Total <= 0 || cpu[0].StatCount < 4 {
 		t.Errorf("invalid cpu value: %+v", cpu)
 	}
 	t.Logf("cpu value: %+v", cpu)
 }
 
 func TestCollectCPUStats(t *testing.T) {
-	got, err := collectCPUStats(strings.NewReader(
+	got, err := collectCPUStats(numCores, strings.NewReader(
 		`cpu  1415984 38486 429451 2500643 10585 157 2372 0 0 0
 cpu0 708614 19410 217184 2188812 9733 144 808 0 0 0
 cpu1 707370 19076 212266 311830 851 12 1564 0 0 0
