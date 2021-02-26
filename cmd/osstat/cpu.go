@@ -3,7 +3,7 @@
 package main
 
 import (
-	"github.com/mackerelio/go-osstat/cpu"
+	"github.com/wangaoone/go-osstat/cpu"
 )
 
 type cpuGenerator struct {
@@ -12,7 +12,8 @@ type cpuGenerator struct {
 }
 
 func (gen *cpuGenerator) Get() {
-	gen.cpu, gen.err = cpu.Get()
+	//gen.cpu, gen.err = cpu.Get(1)
+	panic("implement me")
 }
 
 func (gen *cpuGenerator) Error() error {

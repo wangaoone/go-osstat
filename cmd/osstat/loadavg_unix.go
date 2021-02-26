@@ -3,7 +3,7 @@
 package main
 
 import (
-	"github.com/mackerelio/go-osstat/loadavg"
+	"github.com/wangaoone/go-osstat/loadavg"
 )
 
 type loadavgGenerator struct {

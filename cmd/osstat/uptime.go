@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/mackerelio/go-osstat/uptime"
+	"github.com/wangaoone/go-osstat/uptime"
 )
 
 type uptimeGenerator struct {
