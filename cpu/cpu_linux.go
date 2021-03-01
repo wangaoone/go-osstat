@@ -58,7 +58,6 @@ func collectCPUStats(numCores int, out io.Reader) ([]*Stats, error) {
 
 		scanner.Scan()
 		tempCpuStat := scanner.Text()
-		fmt.Println(i, "tempCpuStat", tempCpuStat)
 		valStrs := strings.Fields(tempCpuStat)[1:]
 		cpu.StatCount = len(valStrs)
 		for i, valStr := range valStrs {
@@ -75,7 +74,6 @@ func collectCPUStats(numCores int, out io.Reader) ([]*Stats, error) {
 		cpu.Total -= cpu.Guest
 		// cpustat[CPUTIME_NICE] includes cpustat[CPUTIME_GUEST_NICE]
 		cpu.Total -= cpu.GuestNice
-		fmt.Println(cpu.Idle)
 		res[i] = &cpu
 	}
 
