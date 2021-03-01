@@ -1,9 +1,9 @@
 # OS system statistics library for Go
 This is a library to get system metrics like cpu load and memory usage.
-The library is created for [mackerel-agent](https://github.com/mackerelio/mackerel-agent).
+The library is created for [mackerel-agent](https://github.com/wangaoone/mackerel-agent).
 
-[![GoDev](https://pkg.go.dev/badge/github.com/mackerelio/go-osstat)](https://pkg.go.dev/github.com/mackerelio/go-osstat)
-[![Build Status](https://github.com/mackerelio/go-osstat/workflows/Build/badge.svg)](https://github.com/mackerelio/go-osstat/workflows/Build/badge.svg)
+[![GoDev](https://pkg.go.dev/badge/github.com/wangaoone/go-osstat)](https://pkg.go.dev/github.com/wangaoone/go-osstat)
+[![Build Status](https://github.com/wangaoone/go-osstat/workflows/Build/badge.svg)](https://github.com/wangaoone/go-osstat/workflows/Build/badge.svg)
 
 ## Example
 ```go
@@ -13,7 +13,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/mackerelio/go-osstat/memory"
+	"github.com/wangaoone/go-osstat/memory"
 )
 
 func main() {
@@ -53,7 +53,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/mackerelio/go-osstat/cpu"
+	"github.com/wangaoone/go-osstat/cpu"
 )
 
 func main() {
